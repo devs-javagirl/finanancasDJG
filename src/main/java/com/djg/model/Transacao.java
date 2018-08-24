@@ -23,7 +23,6 @@ public class Transacao implements Serializable {
 	private LocalDate data;
 	
 	@ManyToOne
-	@JoinColumn(name="categoria_id", referencedColumnName="id")
 	private Categorias categoria;
 	
 	@ManyToOne
