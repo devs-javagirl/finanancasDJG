@@ -14,6 +14,16 @@ public class Conta {
 	private Long id;
 	private String tipoConta;
 	
+	private Double saldo;
+	
+	public Double getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(Double saldo) {
+		this.saldo = saldo;
+	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
