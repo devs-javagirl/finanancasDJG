@@ -3,10 +3,9 @@ package com.djg.repository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.djg.model.Conta;
+import com.djg.model.Usuario;
 
 @Repository
-public interface ContaRepository extends CrudRepository<Conta,Long>{
+public interface UsuarioRepository extends CrudRepository<Usuario,Long>{
 
-	
 }

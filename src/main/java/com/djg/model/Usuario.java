@@ -14,7 +14,7 @@ public class Usuario{
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer id;
+	private Long id;
 	
 	public String getNome() {
 		return nome;
@@ -45,12 +45,12 @@ public class Usuario{
 		this.senha = senha;
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	
