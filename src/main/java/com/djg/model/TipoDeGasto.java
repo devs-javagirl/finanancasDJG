@@ -1,16 +1,12 @@
 package com.djg.model;
 
-import java.io.Serializable;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Categorias implements Serializable {
-	
-	private static final long serialVersionUID = 1L;
+public class TipoDeGasto {
 	
 	private String categoria;
 	
@@ -18,11 +14,11 @@ public class Categorias implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
-	public Categorias() {
+	public TipoDeGasto() {
 		super();
 	}
 
-	public Categorias(String categoria, Integer id) {
+	public TipoDeGasto(String categoria, Integer id) {
 		super();
 		this.categoria = categoria;
 		this.id = id;
@@ -60,7 +56,7 @@ public class Categorias implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Categorias other = (Categorias) obj;
+		TipoDeGasto other = (TipoDeGasto) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;

@@ -21,7 +21,7 @@ public class Transacao {
 	private LocalDate data;
 	
 	@ManyToOne
-	private Categorias categoria;
+	private TipoDeGasto categoria;
 	
 	@ManyToOne
 	@JoinColumn(name="conta_id", referencedColumnName="id")

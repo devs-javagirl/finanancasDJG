@@ -15,7 +15,7 @@ public class SubCategoria{
 	
 	@ManyToOne
 	@JoinColumn(name="categoria_id", referencedColumnName="id")
-	private Categorias categoria;
+	private TipoDeGasto categoria;
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -30,11 +30,11 @@ public class SubCategoria{
 		this.subCategoria = subCategoria;
 	}
 
-	public Categorias getCategoria() {
+	public TipoDeGasto getCategoria() {
 		return categoria;
 	}
 
-	public void setCategoria(Categorias categoria) {
+	public void setCategoria(TipoDeGasto categoria) {
 		this.categoria = categoria;
 	}
 
