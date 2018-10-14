@@ -19,8 +19,8 @@ import com.djg.repository.ContaRepository;
 public class ContaController {
 	@Autowired	
 	private ContaRepository cr;
-	@PostMapping(path = "/conta", produces = MediaType.APPLICATION_JSON_VALUE)
 	
+	@PostMapping(path = "/conta", produces = MediaType.APPLICATION_JSON_VALUE)
 	public void  criaConta(@RequestBody Conta conta) {
 		cr.save(conta);
 	}

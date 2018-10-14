@@ -9,36 +9,23 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-
+import com.djg.model.Conta;
 
 @Entity
 public class Transacao {
-	
-	
-	private String tipoTransacao;
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer id;
 	private BigDecimal valor;
 	private String descricao;
 	private LocalDate data;
 	
 	@ManyToOne
-	private Categorias categoria;
+	private TipoDeGasto tipoDeGasto;
 	
 	@ManyToOne
 	@JoinColumn(name="conta_id", referencedColumnName="id")
 	private Conta conta;
-	
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer id;
-	
-
-	public String getTipoTransacao() {
-		return tipoTransacao;
-	}
-
-	public void setTipoTransacao(String tipoTransacao) {
-		this.tipoTransacao = tipoTransacao;
-	}
 
 	public BigDecimal getValor() {
 		return valor;
@@ -64,14 +51,13 @@ public class Transacao {
 		this.data = data;
 	}
 
-	public Integer getId() {
-		return id;
+	public TipoDeGasto getTipoDeGasto() {
+		return tipoDeGasto;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setTipoDeGasto(TipoDeGasto tipoDeGasto) {
+		this.tipoDeGasto = tipoDeGasto;
 	}
-	
 
 	public Conta getConta() {
 		return conta;
@@ -81,5 +67,13 @@ public class Transacao {
 		this.conta = conta;
 	}
 
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	
 	
 }
