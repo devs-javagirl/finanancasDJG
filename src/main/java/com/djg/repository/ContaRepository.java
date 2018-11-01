@@ -7,6 +7,5 @@ import com.djg.model.Conta;
 
 @Repository
 public interface ContaRepository extends CrudRepository<Conta,Long>{
-
 	
 }

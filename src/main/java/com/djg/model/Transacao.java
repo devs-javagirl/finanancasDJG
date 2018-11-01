@@ -15,12 +15,13 @@ import com.djg.model.Conta;
 public class Transacao {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer id;
+	private Long id;
 	private BigDecimal valor;
 	private String descricao;
 	private LocalDate data;
 	
 	@ManyToOne
+	@JoinColumn(name="tipodegasto_id", referencedColumnName="id")
 	private TipoDeGasto tipoDeGasto;
 	
 	@ManyToOne
@@ -67,11 +68,11 @@ public class Transacao {
 		this.conta = conta;
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	

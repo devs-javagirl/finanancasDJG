@@ -25,11 +25,10 @@ public class ContaController {
 		cr.save(conta);
 	}
 	
-	@RequestMapping("/contas")
+	@GetMapping("/contas")
 	public List<Conta> exibeConta() {
 		List<Conta> arrayConta =  (List<Conta>) cr.findAll(); //findAll: retorna um iterable
 		return arrayConta;
-		
 	}
 	
 	@PostMapping(path = "/deletaconta", produces = MediaType.APPLICATION_JSON_VALUE)
