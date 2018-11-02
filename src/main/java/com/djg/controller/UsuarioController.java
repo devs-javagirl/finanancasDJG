@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.djg.model.Conta;
 import com.djg.model.Usuario;
-import com.djg.repository.UsuarioRepository;
 import com.djg.services.UsuarioService;
 
 @RestController
